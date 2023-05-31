@@ -7,6 +7,7 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
 <SplitPane dividerPositions="0.17336683417085427" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="373.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
   <items>
@@ -22,13 +23,10 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TextField layoutX="213.0" layoutY="14.0" />
                         <Label layoutX="158.0" layoutY="18.0" text="姓名" />
-                        <TextField layoutX="213.0" layoutY="48.0" />
                         <Label layoutX="146.0" layoutY="52.0" text="手機號碼" />
-                        <TextField layoutX="213.0" layoutY="81.0" />
-                        <Label layoutX="146.0" layoutY="85.0" text="電子信箱" />
-                        <Button layoutX="272.0" layoutY="150.0" mnemonicParsing="false" text="登出" />
+                        <Label fx:id="emailLabel" layoutX="146.0" layoutY="85.0" prefHeight="17.0" prefWidth="227.0" text="電子信箱" />
+                        <Button layoutX="272.0" layoutY="150.0" mnemonicParsing="false" onAction="#switchToLogin" text="登出" />
                      </children>
                   </AnchorPane>
             </content>
@@ -37,9 +35,8 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TextField layoutX="220.0" layoutY="14.0" />
-                        <Label layoutX="160.0" layoutY="18.0" text="優惠代碼" />
-                        <Button layoutX="380.0" layoutY="14.0" mnemonicParsing="false" text="新增" />
+                        <Pane layoutX="172.0" layoutY="14.0" prefHeight="78.0" prefWidth="200.0" style="-fx-background-color: lightgrey;" />
+                        <Pane layoutX="172.0" layoutY="97.0" prefHeight="78.0" prefWidth="200.0" style="-fx-background-color: lightgrey;" />
                      </children></AnchorPane>
             </content>
           </Tab>
@@ -52,10 +49,8 @@
                         <TextField layoutX="250.0" layoutY="23.0" prefHeight="23.0" prefWidth="60.0" />
                         <TextField layoutX="320.0" layoutY="23.0" prefHeight="23.0" prefWidth="60.0" />
                         <Label layoutX="70.0" layoutY="27.0" text="卡號" />
-                        <Button layoutX="380.0" layoutY="23.0" mnemonicParsing="false" text="更改" />
                         <Label layoutX="64.0" layoutY="53.0" text="安全碼" />
                         <TextField layoutX="110.0" layoutY="49.0" prefHeight="23.0" prefWidth="72.0" />
-                        <Button layoutX="180.0" layoutY="49.0" mnemonicParsing="false" text="更改" />
                         <Label layoutX="58.0" layoutY="87.0" text="預設卡號" />
                         <Label layoutX="110.0" layoutY="87.0" text=" ****  ****  ****  ****" />
                      </children>

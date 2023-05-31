@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
+   <children>
+      <Label layoutX="140.0" layoutY="284.0" text="是否要使用優惠券？">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Button layoutX="41.0" layoutY="44.0" mnemonicParsing="false" onAction="#switchToStatusOfUse" prefHeight="37.0" prefWidth="73.0" text="取消">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <CheckBox layoutX="332.0" layoutY="284.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="56.0" text="Yes">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="419.0" layoutY="284.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="56.0" text="No">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="278.0" layoutY="63.0" prefHeight="24.0" prefWidth="109.0" text="本次租借資訊">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="140.0" layoutY="128.0" prefHeight="24.0" prefWidth="109.0" text="借車時間：">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="140.0" layoutY="168.0" prefHeight="24.0" prefWidth="109.0" text="還車時間：">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="140.0" layoutY="213.0" prefHeight="24.0" prefWidth="307.0" text="總計：      分鐘">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="140.0" layoutY="248.0" prefHeight="24.0" prefWidth="298.0" text="費用：     元">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="475.0" layoutY="327.0" mnemonicParsing="false" onAction="#switchToPay" prefHeight="37.0" prefWidth="73.0" text="下一步">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

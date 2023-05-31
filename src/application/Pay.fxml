@@ -5,27 +5,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
    <children>
-      <Label layoutX="165.0" layoutY="146.0" text="是否要使用優惠券？">
+      <Label layoutX="183.0" layoutY="58.0" prefHeight="134.0" prefWidth="234.0" style="-fx-background-color: skyblue;" text="信用卡資訊" />
+      <Label layoutX="183.0" layoutY="217.0" prefHeight="47.0" prefWidth="234.0" style="-fx-background-color: lightgrey;" text="付款金額" />
+      <Button layoutX="258.0" layoutY="320.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="84.0" text="確認付款">
          <font>
-            <Font size="30.0" />
-         </font>
-      </Label>
-      <Button layoutX="180.0" layoutY="212.0" mnemonicParsing="false" text="Yes">
-         <font>
-            <Font size="25.0" />
+            <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="334.0" layoutY="212.0" mnemonicParsing="false" text="No">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Button>
-      <Button layoutX="41.0" layoutY="44.0" mnemonicParsing="false" onAction="#switchToStatusOfUse" prefHeight="37.0" prefWidth="73.0" text="Cancel">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Button>
+      <Button layoutX="45.0" layoutY="46.0" mnemonicParsing="false" onAction="#switchToRentInfo" text="取消" />
    </children>
 </AnchorPane>
