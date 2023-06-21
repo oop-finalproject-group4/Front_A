@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane fx:id="container" prefHeight="1000.0" prefWidth="1334.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.carMapController">
+   <children>
+      <SplitPane dividerPositions="0.75" prefHeight="1000.0" prefWidth="1334.0">
+        <items>
+          <Pane prefHeight="1000.0" prefWidth="1334">
+            <children>
+              <StackPane prefHeight="1000.0" prefWidth="1000.0">
+                <children>
+                        <AnchorPane fx:id="Pane1" prefHeight="1000.0" prefWidth="1000.0">
+                           <children>
+                        <ImageView fx:id="mapImageView" fitHeight="1000.0" fitWidth="1000.0" preserveRatio="true" />
+                              <AnchorPane fx:id="circlePane" prefHeight="1000.0" prefWidth="1000.0">
+                                 <children>
+                              <Circle fx:id="centerPoint" fill="RED" onMouseClicked="#showCenterInfo" radius="10.0" stroke="RED" strokeType="INSIDE" visible="false" />
+                                 </children>
+                              </AnchorPane> 
+                           </children>
+                        </AnchorPane>
+                </children>
+              </StackPane>
+            </children>
+          </Pane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1000.0" prefWidth="1334.0">
+            <children>
+              <Button layoutX="229.0" layoutY="770.0" mnemonicParsing="false" onAction="#zoomOut" prefHeight="26.0" prefWidth="26.0" text="-" />
+              <Button layoutX="229.0" layoutY="748.0" mnemonicParsing="false" onAction="#zoomIn" text="+" />
+              <Button layoutX="125.0" layoutY="725.0" mnemonicParsing="false" onAction="#moveUp" prefHeight="45.0" prefWidth="45.0" text="⇧">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+              <Button layoutX="75.0" layoutY="775.0" mnemonicParsing="false" onAction="#moveLeft" text="⇦">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+              <Button layoutX="175.0" layoutY="775.0" mnemonicParsing="false" onAction="#moveRight" text="⇨">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+              <Button layoutX="125.0" layoutY="775.0" mnemonicParsing="false" onAction="#moveDown" text="⇩">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+              <Button layoutX="85.0" layoutY="825.0" mnemonicParsing="false" onAction="#rent" prefHeight="50.0" prefWidth="125.0" text="Rent">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+                  <Label layoutX="25.0" layoutY="100.0" text="車號">
+                     <font>
+                        <Font size="25.0" />
+                     </font></Label>
+                  <Label fx:id="LabelCarNo" layoutX="90.0" layoutY="100.0" prefHeight="33.0" prefWidth="139.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font></Label>
+                  <Label layoutX="25.0" layoutY="150.0" text="電量">
+                     <font>
+                        <Font size="25.0" />
+                     </font></Label>
+                  <Label fx:id="LabelCarPower" layoutX="90.0" layoutY="150.0" prefHeight="24.0" prefWidth="70.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font></Label>
+                  <Label layoutX="25.0" layoutY="200.0" text="距離">
+                     <font>
+                        <Font size="25.0" />
+                     </font></Label>
+                  <Label fx:id="LabelCarDist" layoutX="90.0" layoutY="200.0" prefHeight="33.0" prefWidth="100.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font></Label>
+                  <Label layoutX="25.0" layoutY="250.0" text="緯度">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabelCarLat" layoutX="90.0" layoutY="250.0" prefHeight="33.0" prefWidth="225.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="300.0" text="經度">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabelCarLng" layoutX="90.0" layoutY="300.0" prefHeight="33.0" prefWidth="225.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+            </children>
+          </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

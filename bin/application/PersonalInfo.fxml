@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.17336683417085427" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="373.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="60.0" prefWidth="600.0">
+         <children>
+            <Button layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#switchToScooterInfo" text="租車" />
+            <Button layoutX="520.0" layoutY="13.0" mnemonicParsing="false" onAction="#switchToRecord" text="歷史紀錄" />
+            <Label layoutX="263.0" layoutY="17.0" text="個人資料頁面" />
+         </children></AnchorPane>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="帳戶">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="158.0" layoutY="18.0" text="姓名" />
+                        <Label layoutX="146.0" layoutY="52.0" text="手機號碼" />
+                        <Label layoutX="146.0" layoutY="85.0" prefHeight="17.0" prefWidth="227.0" text="電子信箱" />
+                        <Button layoutX="278.0" layoutY="214.0" mnemonicParsing="false" onAction="#Logout" text="登出" />
+                        <Label fx:id="nameLabel" layoutX="241.0" layoutY="18.0" />
+                        <Label fx:id="phoneLabel" layoutX="241.0" layoutY="52.0" />
+                        <Label fx:id="emailLabel" layoutX="241.0" layoutY="86.0" />
+                        <Button layoutX="220.0" layoutY="214.0" mnemonicParsing="false" onAction="#show" text="顯示" />
+                        <Label fx:id="couponLabel" layoutX="158.0" layoutY="119.0" prefHeight="17.0" prefWidth="227.0" text="優惠券" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="付款設定">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="220.0" prefWidth="598.0">
+                     <children>
+                        <Label layoutX="171.0" layoutY="27.0" text="卡號" />
+                        <Label layoutX="165.0" layoutY="76.0" text="安全碼" />
+                        <Label fx:id="creditLabel" layoutX="236.0" layoutY="27.0" prefHeight="15.0" prefWidth="187.0" />
+                        <Label fx:id="safeLabel" layoutX="245.0" layoutY="76.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+  </items>
+</SplitPane>

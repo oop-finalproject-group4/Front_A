@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RepairController">
+   <children>
+      <Button layoutX="24.0" layoutY="328.0" mnemonicParsing="false" onAction="#Logout" text="登出" />
+      <Button layoutX="322.0" layoutY="351.0" mnemonicParsing="false" onAction="#adjustToRepair" text="調整至維修中" />
+      <TableView fx:id="tableView" layoutX="228.0" layoutY="-3.0" prefHeight="265.0" prefWidth="600.0" AnchorPane.bottomAnchor="135.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="noColumn" prefWidth="155.2000732421875" text="車牌號碼" />
+          <TableColumn minWidth="0.0" prefWidth="215.199951171875" text="位置">
+               <columns>
+                  <TableColumn fx:id="lngColumn" prefWidth="120.0" text="經度" />
+                  <TableColumn fx:id="latColumn" prefWidth="120.0" text="緯度" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="powerColumn" minWidth="0.0" prefWidth="75.20001220703125" text="電量" />
+            <TableColumn fx:id="carStatusColumn" minWidth="6.4000244140625" prefWidth="124.80010986328125" text="狀態" />
+        </columns>
+      </TableView>
+      <Button layoutX="322.0" layoutY="328.0" mnemonicParsing="false" onAction="#adjustToNormal" text="調整至正常" />
+      <Button layoutX="443.0" layoutY="328.0" mnemonicParsing="false" onAction="#chargeToFull" prefHeight="23.0" prefWidth="70.0" text="充電" />
+      <Button layoutX="87.0" layoutY="272.0" mnemonicParsing="false" onAction="#listNormalCars" text="顯示正常車輛" />
+      <Button layoutX="87.0" layoutY="307.0" mnemonicParsing="false" onAction="#listRepairCars" text="顯示維修中車輛" />
+      <Button layoutX="87.0" layoutY="340.0" mnemonicParsing="false" onAction="#listBrokenCars" text="顯示損壞車輛" />
+      <Button layoutX="87.0" layoutY="374.0" mnemonicParsing="false" onAction="#listnoPowerCars" text="顯示需充電車輛" />
+      <TextField fx:id="carNoTextField" layoutX="319.0" layoutY="296.0" />
+      <Label layoutX="322.0" layoutY="276.0" prefHeight="15.0" prefWidth="170.0" text="請輸入要調整或充電的車牌號" />
+      <Button layoutX="322.0" layoutY="374.0" mnemonicParsing="false" onAction="#adjustToBroken" text="調整至損壞" />
+   </children>
+</AnchorPane>
