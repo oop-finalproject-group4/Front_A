@@ -1,6 +1,7 @@
 package application;
 	
 import javafx.application.Application;
+
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
@@ -12,8 +13,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-			//BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("StageOfUse.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("Login.fxml")); //最後要改成Login.fxml
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
@@ -26,5 +26,6 @@ public class Main extends Application {
 	
 	public static void main(String[] args) {
 		launch(args);
+	
 	}
 }

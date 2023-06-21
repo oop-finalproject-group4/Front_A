@@ -6,52 +6,65 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
    <children>
-      <Label layoutX="170.0" layoutY="116.0" text="電子信箱">
+      <Label layoutX="170.0" layoutY="244.0" text="電子信箱">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="198.0" layoutY="147.0" text="密碼">
+      <Label layoutX="198.0" layoutY="103.0" text="密碼">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="155.0" layoutY="217.0" text="信用卡卡號">
+      <Label layoutX="155.0" layoutY="140.0" text="信用卡卡號">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="170.0" layoutY="184.0" text="手機號碼">
+      <Label layoutX="170.0" layoutY="207.0" text="手機號碼">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="244.0" layoutY="112.0" prefHeight="26.0" prefWidth="179.0" />
-      <TextField layoutX="244.0" layoutY="145.0" prefHeight="26.0" prefWidth="179.0" />
-      <TextField layoutX="244.0" layoutY="182.0" prefHeight="26.0" prefWidth="179.0" />
-      <Button layoutX="265.0" layoutY="308.0" mnemonicParsing="false" onAction="#switchToLogin" text="確認">
+      <TextField fx:id="passwordTextField" layoutX="244.0" layoutY="97.0" prefHeight="26.0" prefWidth="179.0" />
+      <TextField fx:id="emailTextField" layoutX="243.0" layoutY="239.0" prefHeight="26.0" prefWidth="179.0" />
+      <TextField fx:id="phoneTextField" layoutX="243.0" layoutY="204.0" prefHeight="26.0" prefWidth="179.0" />
+      <Button layoutX="265.0" layoutY="323.0" mnemonicParsing="false" onAction="#registration" text="確認">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Label layoutX="191.0" layoutY="283.0" text="輸入完成以上資訊後，點選確認完成註冊" />
-      <Label layoutX="184.0" layoutY="251.0" text="安全碼">
+      <Label layoutX="191.0" layoutY="298.0" text="輸入完成以上資訊後，點選確認完成註冊" />
+      <Label layoutX="184.0" layoutY="173.0" text="安全碼">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="244.0" layoutY="247.0" prefHeight="26.0" prefWidth="42.0" />
-      <TextField layoutX="244.0" layoutY="213.0" prefHeight="26.0" prefWidth="42.0" />
-      <TextField layoutX="290.0" layoutY="213.0" prefHeight="26.0" prefWidth="42.0" />
-      <TextField layoutX="336.0" layoutY="213.0" prefHeight="26.0" prefWidth="42.0" />
-      <TextField layoutX="382.0" layoutY="213.0" prefHeight="26.0" prefWidth="42.0" />
-      <Label layoutX="198.0" layoutY="82.0" text="姓名">
+      <TextField fx:id="safeTextField" layoutX="244.0" layoutY="168.0" prefHeight="26.0" prefWidth="42.0" />
+      <Label layoutX="198.0" layoutY="64.0" text="姓名">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="244.0" layoutY="78.0" prefHeight="26.0" prefWidth="179.0" />
+      <TextField fx:id="nameTextField" layoutX="244.0" layoutY="60.0" prefHeight="26.0" prefWidth="179.0" />
+      <TextField fx:id="creditTextField" layoutX="243.0" layoutY="132.0" prefHeight="26.0" prefWidth="179.0" />
+      <Label layoutX="426.0" layoutY="138.0" text="(共16碼)" textFill="#6f6d6d">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="289.0" layoutY="175.0" text="(共3碼)" textFill="#6b6767">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="229.0" layoutY="272.0" text="電子信箱格式範例:  esoe@gmail.com" textFill="#6b6767">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="37.0" layoutY="34.0" mnemonicParsing="false" onAction="#switchToLogin" text="返回" />
    </children>
 </AnchorPane>

@@ -4,25 +4,15 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.recordController">
    <top>
-      <AnchorPane prefHeight="95.0" prefWidth="600.0" style="-fx-background-color: lavender;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="81.0" prefWidth="600.0" style="-fx-background-color: lavender;" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="38.0" layoutY="25.0" mnemonicParsing="false" onAction="#switchToPersonalInfo" prefHeight="43.0" prefWidth="84.0" text="Back">
-               <graphic>
-                  <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../Downloads/IMG_8329.PNG" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
+            <Button layoutX="38.0" layoutY="25.0" mnemonicParsing="false" onAction="#switchToPersonalInfo" prefHeight="43.0" prefWidth="84.0" text="Back" />
             <Label alignment="CENTER" layoutX="189.0" layoutY="35.0" text="租借車歷史紀錄" textAlignment="CENTER" AnchorPane.leftAnchor="189.0" AnchorPane.rightAnchor="189.0">
                <font>
                   <Font name="System Bold" size="18.0" />
@@ -32,15 +22,28 @@
       </AnchorPane>
    </top>
    <center>
-      <TableView prefHeight="281.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="tableView" prefHeight="332.0" prefWidth="600.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="85.0" text="日期" />
-          <TableColumn prefWidth="85.0" text="總金額" />
-            <TableColumn prefWidth="85.0" text="起點&amp;終點" />
-            <TableColumn prefWidth="85.0" text="距離" />
-            <TableColumn prefWidth="85.0" text="借還車時間" />
-            <TableColumn prefWidth="85.0" text="充電次數" />
-            <TableColumn prefWidth="89.0" text="優惠券使用" />
+          <TableColumn fx:id="billColumn" prefWidth="48.000001549720764" text="總金額" />
+            <TableColumn minWidth="12.0" prefWidth="178.39998626708984" text="起點">
+               <columns>
+                  <TableColumn fx:id="start_lngColumn" prefWidth="75.0" text="經度" />
+                  <TableColumn fx:id="start_latColumn" prefWidth="75.0" text="緯度" />
+               </columns></TableColumn>
+            <TableColumn prefWidth="122.4000244140625" text="終點">
+               <columns>
+                  <TableColumn fx:id="end_lngColumn" prefWidth="75.0" text="經度" />
+                  <TableColumn fx:id="end_latColumn" prefWidth="75.0" text="緯度" />
+               </columns></TableColumn>
+            <TableColumn fx:id="distanceColumn" prefWidth="58.39996337890625" text="距離" />
+            <TableColumn prefWidth="268.8000793457031" text="借還車時間">
+               <columns>
+                  <TableColumn fx:id="startTimeColumn" prefWidth="140.0" text="借車時間" />
+                  <TableColumn fx:id="endTimeColumn" prefWidth="140.0" text="還車時間" />
+               </columns></TableColumn>
+            <TableColumn fx:id="totalMinutesColumn" prefWidth="77.60003662109375" text="總時間(min)" />
+            <TableColumn fx:id="chargeCountColumn" prefWidth="52.7999267578125" text="充電次數" />
+            <TableColumn fx:id="usedCouponColumn" text="優惠券使用" />
         </columns>
       </TableView>
    </center>

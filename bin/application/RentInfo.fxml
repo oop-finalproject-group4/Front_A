@@ -8,54 +8,52 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
    <children>
-      <Label layoutX="140.0" layoutY="284.0" text="是否要使用優惠券？">
+      <Label layoutX="140.0" layoutY="254.0" text="是否要使用優惠券？">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Button layoutX="41.0" layoutY="44.0" mnemonicParsing="false" onAction="#switchToStatusOfUse" prefHeight="37.0" prefWidth="73.0" text="取消">
+      <Button layoutX="41.0" layoutY="44.0" mnemonicParsing="false" onAction="#switchToStatusOfUse1" prefHeight="37.0" prefWidth="73.0" text="取消">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <CheckBox layoutX="332.0" layoutY="284.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="56.0" text="Yes">
-         <font>
-            <Font size="14.0" />
-         </font></CheckBox>
-      <CheckBox layoutX="419.0" layoutY="284.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="56.0" text="No">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </CheckBox>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="278.0" layoutY="63.0" prefHeight="24.0" prefWidth="109.0" text="本次租借資訊">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="140.0" layoutY="128.0" prefHeight="24.0" prefWidth="109.0" text="借車時間：">
+      <Label fx:id="startTime" layoutX="140.0" layoutY="98.0" prefHeight="24.0" prefWidth="411.0" text="借車時間：">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="140.0" layoutY="168.0" prefHeight="24.0" prefWidth="109.0" text="還車時間：">
+      <Label fx:id="endTime" layoutX="140.0" layoutY="138.0" prefHeight="24.0" prefWidth="389.0" text="還車時間：">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="140.0" layoutY="213.0" prefHeight="24.0" prefWidth="307.0" text="總計：      分鐘">
+      <Label fx:id="totalMinutes" layoutX="140.0" layoutY="183.0" prefHeight="24.0" prefWidth="389.0" text="總計：      分鐘">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="140.0" layoutY="248.0" prefHeight="24.0" prefWidth="298.0" text="費用：     元">
+      <Label fx:id="bill" layoutX="140.0" layoutY="218.0" prefHeight="24.0" prefWidth="298.0" text="費用：     元">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="475.0" layoutY="327.0" mnemonicParsing="false" onAction="#switchToPay" prefHeight="37.0" prefWidth="73.0" text="下一步">
+      <Button layoutX="244.0" layoutY="331.0" mnemonicParsing="false" onAction="#payAndReturnCar" prefHeight="37.0" prefWidth="134.0" text="確認付款">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
+      <CheckBox fx:id="couponCheck" layoutX="333.0" layoutY="257.0" mnemonicParsing="false" onAction="#couponUse" text="Yes" />
+      <Button layoutX="140.0" layoutY="44.0" mnemonicParsing="false" onAction="#showRentInfo" prefHeight="37.0" prefWidth="73.0" text="Show" />
+      <Label fx:id="card" layoutX="140.0" layoutY="288.0" prefHeight="24.0" prefWidth="389.0" text="信用卡號：">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

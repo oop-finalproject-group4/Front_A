@@ -5,10 +5,12 @@ import javafx.scene.control.Label;
 public class PersonalInfoController {
 
 	@FXML
-	Label emailLabel;
+	Label nameLabel;
 	
 	public void displayEmail (String email) {
-		emailLabel.setText("電子信箱 " + email);
+		
+		
+
 	}
 	
 }
